@@ -1,0 +1,112 @@
+///Candidates: 1 Tiger, 2 Punisher, 3 Noy, 4 Glory
+///Put points as needed ex; give Noy 4 pts, others 0 > 0, 0, 4 ,0
+
+{
+    text: "Education: What is your stance on free college and general education for all peoples?",
+    options: [
+      { label: "Strongly support", weights: [3, 5, 4, 2] },
+      { label: "Support", weights: [1, 3, 4, 0] },
+      { label: "Neutral", weights: [3, 5, 1, 3] },
+      { label: "Oppose", weights: [2, 3, 2, 5] },
+      { label: "Strongly Oppose", weights: [1, 5, 3, 2] },
+    ],
+  },
+
+  {
+    text: "Student Aid & Scholarships: Should the government expandscholarships and student loan programs?",
+    options: [
+      { label: "Yes, for all students", weights: [1, 2, 4, 4] },
+      { label: "Yes, but only for low-income students", weights: [1, 3, 4, 1] },
+      { label: "Keep the current system", weights: [5, 1, 4, 3] },
+      { label: "No, it’s unnecessary", weights: [5, 3, 5, 2] },
+      { label: "Not sure", weights: [3, 5, 5, 2] },
+    ],
+  },
+
+  {
+    text: "Climate & Environment: What kind of action should thegovernment take on climate change?",
+    options: [
+      { label: "Strong action (e.g., renewable energy, strict environmental laws)", weights: [3, 1, 5, 2] },
+      { label: "Yes, but vary by region", weights: [1, 2, 4, 2] },
+      { label: "Keep it the same", weights: [2, 3, 4, 3] },
+      { label: "Let the private sector decide", weights: [1, 2, 3, 5] },
+      { label: "Not sure", weights: [0, 5, 1, 2] },
+    ],
+  },
+
+  {
+    text: "Healthcare: What kind of healthcare system do you want for the Philippines?",
+    options: [
+      { label: "Free, universal healthcare", weights: [4, 1, 1, 2] },
+      { label: "Public + private options", weights: [0, 5, 1, 2] },
+      { label: "Improve current system", weights: [4, 1, 3, 3] },
+      { label: "Fully privatized system", weights: [2, 4, 1, 3] },
+      { label: "Not sure", weights: [2, 1, 4, 2] },
+    ],
+  },
+
+  {
+    text: "Labor & Minimum Wage: Should the minimum wage in the Philippines be increased?",
+    options: [
+      { label: "Yes, raise to ₱750 or more", weights: [2, 1, 0, 2] },
+      { label: "Yes, but vary by region", weights: [3, 1, 2, 2] },
+      { label: "Keep it the same", weights: [1, 1, 2, 3] },
+      { label: "Let the private sector decide", weights: [4, 1, 0, 2] },
+      { label: "Not sure", weights: [5, 1, 0, 2] },
+    ],
+  },
+
+  {
+    text: "Gun Control & Crime: What is your view on gun laws andaccess to firearms?",
+    options: [
+      { label: "Stricter gun laws", weights: [1, 0, 2, 2] },
+      { label: "Background checks only", weights: [3, 1, 5, 2] },
+      { label: "Keep current system", weights: [2, 5, 4, 4] },
+      { label: "Loosen restrictions", weights: [2, 2, 5, 2] },
+      { label: "Not sure", weights: [4, 2, 3, 2] },
+    ],
+  },
+
+  {
+    text: "Policing & Justice Reform: What reforms should be made to the police and justice system?",
+    options: [
+      { label: "Reduce police budget, invest in social services", weights: [0, 5, 4, 2] },
+      { label: "More training and transparency", weights: [0, 1, 3, 2] },
+      { label: "Keep it as is", weights: [1, 0, 4, 3] },
+      { label: "Increase police funding", weights: [3, 1, 0, 1] },
+      { label: "Not sure", weights: [2, 3, 5, 3] },
+    ],
+  },
+
+  {
+    text: "OFWs & Immigration: What policies should be in place for OFWs and immigration?",
+    options: [
+      { label: "Stronger protection for OFWs", weights: [2, 1, 4, 1] },
+      { label: "Stricter immigration control", weights: [5, 2, 4, 2] },
+      { label: "Easier deployment for Filipinos", weights: [3, 3, 3, 0] },
+      { label: "Keep current system", weights: [3, 4, 2, 2] },
+      { label: "Not sure", weights: [1, 5, 1, 0] },
+    ],
+  },
+
+  {
+    text: "Gender & LGBTQ+ Rights: Should the government pass laws protecting LGBTQ+ and gender equality?",
+    options: [
+      { label: "Yes, full legal protection (e.g., SOGIE Bill)", weights: [0, 1, 5, 2] },
+      { label: "Some protections, leave the rest to LGUs", weights: [2, 1, 2, 2] },
+      { label: "No new laws needed", weights: [1, 3, 4, 3] },
+      { label: "Oppose such laws", weights: [3, 1, 3, 2] },
+      { label: "Not sure", weights: [4, 1, 5, 2] },
+    ],
+  },
+
+  {
+    text: "Voting & Election Reform: What’s your view on the voting process in the Philippines",
+    options: [
+      { label: "Make it more accessible (online registration, education)", weights: [1, 3, 1, 2] },
+      { label: "Keep it the same", weights: [2, 0, 4, 2] },
+      { label: "Stricter rules (ID, limit absentee voting)", weights: [3, 2, 4, 5] },
+      { label: "Make voting harder", weights: [3, 1, 4, 2] },
+      { label: "Not sure", weights: [0, 1, 2, 3] },
+    ],
+  },

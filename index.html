@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CampusVote: Your University Voting Guide</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Header Section with Navigation -->
+<header>
+  <nav class="navbar">
+    <!-- Logo on the left -->
+    <div class="logo">
+      <a href="#home">
+        <img src="logo.png" alt="CampusVotes Logo" />
+      </a>
+    </div>
+
+    <!-- Navigation links on the right -->
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#quiz">Take Quiz</a></li>
+      <li><a href="#view-candidates">View Candidates</a></li>
+      <li><a href="#stats">University Stats</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+    <!-- Home Section  -->
+    <section id="home" class="page">
+        <h1>Welcome to CampusVote!</h1>
+        <p>Many young voters are uninformed or confused about candidates and their alignment with personal values. Our site helps students match their views to candidates and access easy-to-read info about each candidate. With elections influencing society deeply, educating students digitally is important.</p>
+
+<section id="video-section">
+    <h2></h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/18tKHhHLBqs?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</section>    
+
+</section>
+
+	<!-- Quiz Section -->
+  <section id="quiz" class="page" style="display: none;">
+    <div class="container">
+      <h1>Quiz: Find Your Politician!</h1>
+      <form id="quizForm">
+      
+        <button type="button" onclick="submitQuiz()">Submit</button>
+      </form>
+      <div id="result"></div>
+    </div>
+  </section>
+
+    <!-- Candidate Information Section Below Carousel -->
+    <section id="view-candidates" class="page" style="display: none;"">
+        <h2>Meet the Candidates</h2>
+         
+	<div class="carousel-container">
+            <!-- Navigation Buttons -->
+            <button class="prev">&#10094;</button>
+	    <div id="carousel" class="carousel"></div>
+            <button class="next">&#10095;</button>
+        </div>
+
+	 <div id="candidate-list" class="candidate-list"></div>
+
+    </section>	
+
+
+<!-- University Stats -->
+<section id="stats" class="page" style="display: none;">
+    <h2>Student's Quiz Choice</h2>
+	<p>Results will be inserted here dynamically.</p>
+    <div id="stats-content">
+        <!-- Results will be inserted here dynamically -->
+    </div>
+</section>
+
+
+    <!-- About Section -->
+    <section id="about" class="page" style="display: none;">
+        <h2>About Us</h2>
+        <p>This website allows students to take quiz to determine which candidates to vote for.</p>
+
+	<button id="resetVotesButton">Reset Votes and Stats</button>
+    </section>
+
+
+
+<!-- Modal structure (initially hidden) -->
+<div id="resultModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>Your Matched Candidate</h2>
+    <img id="candidateImage" src="" alt="" class="candidate-image">
+    <div id="candidateDetails">
+      <h3 id="candidateName"></h3>
+      <p id="candidateParty"></p>
+      <p id="candidateMessage"></p>
+      <p><a id="candidateWebsiteLink" href="#" target="_blank" rel="noopener noreferrer">Visit Website</a></p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 CampusVote</p>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <img src="images/facebook-icon.png" alt="Facebook" />
+        </a>
+        <a href="https://tiktok.com" target="_blank" aria-label="Twitter">
+            <img src="images/tiktok-icon.png" alt="Tiktok" />
+        </a>
+    </div>
+</footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
