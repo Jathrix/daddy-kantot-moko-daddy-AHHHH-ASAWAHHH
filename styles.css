@@ -1,0 +1,521 @@
+/* Modal Overlay (Background) */
+#resultModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+  opacity: 0; /* Make it invisible initially */
+  transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
+  pointer-events: none; /* Prevent interaction with modal when hidden */
+}
+
+/* When the modal is shown, it becomes visible */
+#resultModal.show {
+  display: block;
+  opacity: 1;
+  pointer-events: auto; /* Allow interaction with modal content */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for entering */
+}
+
+/* Modal when entering from the top */
+#resultModal.show .modal-content {
+  transform: translateY(0);
+}
+
+/* The Close Button */
+.close-btn {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black; /* Darker color on hover */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Styling for Candidate's Image */
+#candidateImage {
+  width: 100%;
+  height: auto;
+  max-width: 200px; /* Limit the image size */
+  border-radius: 10px; /* Rounded corners for the image */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Candidate's Name */
+#candidateName {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  color: #333; /* Dark text color */
+}
+
+/* Candidate's Party */
+#candidateParty {
+  font-size: 18px;
+  text-align: center;
+  color: #777; /* Lighter text color */
+  margin-top: 5px;
+}
+
+/* Candidate's Policies */
+#candidateMessage {
+  font-size: 16px;
+  text-align: center;
+  color: #333;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+/* Candidate's Website Link */
+#candidateWebsiteLink {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: #007bff; /* Blue color for the link */
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#candidateWebsiteLink:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Modal Content Layout */
+.modal-content .details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-content .details-container p {
+  margin: 5px 0;
+}
+
+
+/* Container for each school's vote breakdown */
+.school-breakdown-entry {
+  margin-bottom: 30px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.candidate-bar {
+  margin-bottom: 15px;
+}
+
+.bar-container {
+  width: 100%;
+  height: 25px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+.bar {
+  height: 100%;
+  background-color: #4caf50; /* Green for positive */
+  border-radius: 5px;
+}
+
+.candidate-bar strong {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.candidate-bar p {
+  margin-top: 5px;
+  font-size: 0.9em;
+}
+
+#home p {
+  font-size: 18px; /* or any size you prefer */
+  line-height: 1.6; /* optional: makes text easier to read */
+  margin-top: 10px; /* optional: adds space above the paragraph */
+padding: 20px;
+}
+
+#stats-content h3 {
+  margin-bottom: 25px; /* Adjust this value as needed */
+}
+
+#stats-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+#stats-content p {
+    margin-bottom: 5px; /* Adds space between each paragraph */
+}
+
+.school-breakdown-entry {
+  flex: 0 0 300px; /* Width of each box */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #f9f9f9;
+  text-align: center;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.school-breakdown-entry img.candidate-image {
+  width: 100%;
+  max-width: 150px;
+  height: 150px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.question {
+  margin-bottom: 30px;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.question p {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.question label {
+  display: block;
+  margin: 0px 0;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#quizForm button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #007BFF;
+}
+
+/* Header / Nav Bar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.logo img {
+  height: 40px; /* You can change this to fit your design */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* Reset & base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding-bottom: 100px;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+section h1, section h2 {
+    margin-bottom: 1rem;
+}
+/* Header / Nav Bar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.logo img {
+  height: 40px; /* You can change this to fit your design */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Carousel */
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+    z-index: 0;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-item img {
+    width: 150px;              /* Ensure the image takes the full width of the container */
+    height: 150px;            /* Set a fixed height for the image */
+    object-fit: cover;        /* Ensures the image covers the space, cropping if necessary */
+    margin-bottom: 1rem;
+}
+
+.carousel-text {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.5s ease;
+}
+
+.carousel-item.active .carousel-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.carousel-text h2 {
+    margin-bottom: 0.5rem;
+}
+
+.carousel-text ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    margin: 0 auto 1rem;
+    max-width: 400px;
+}
+
+/* Buttons */
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+}
+
+button.prev:hover,
+button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Candidate Information Styles */
+#candidate-info {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.candidate-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.candidate-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.candidate-item:hover {
+    transform: scale(1.05);
+}
+
+.candidate-image {
+    width: 150px;             /* Set a fixed width for candidate images */
+    height: 150px;            /* Set a fixed height */
+    object-fit: cover;        /* Ensures the image covers the space without stretching */
+    border-radius: 50%;       /* Optional: Makes the image round */
+    margin-bottom: 1rem;
+}
+
+.candidate-details {
+    text-align: left;
+    font-size: 14px;
+}
+
+.candidate-details h3 {
+    margin-bottom: 10px;
+}
+
+.candidate-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px; /* space between icons */
+}
+
+.social-icons a img {
+    width: 30px; /* adjust size */
+    height: 30px;
+    transition: transform 0.3s ease; /* smooth zoom effect */
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1); /* slightly enlarge icon on hover */
+}
